@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2286" started-at="2013-04-14T07:20:29Z" finished-at="2013-04-14T07:20:31Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2286" started-at="2013-04-14T07:20:29Z" finished-at="2013-04-14T07:20:31Z">
+      <class name="com.chainmeans.poc.swf.service.jpa.NexusServiceImplTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.chainmeans.poc.swf.service.jpa.NexusServiceImplTest@3396e48c]" name="setup" is-config="true" duration-ms="2064" started-at="2013-04-14T15:20:29Z" finished-at="2013-04-14T15:20:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="findAll()[pri:0, instance:com.chainmeans.poc.swf.service.jpa.NexusServiceImplTest@3396e48c]" name="findAll" duration-ms="169" started-at="2013-04-14T15:20:31Z" finished-at="2013-04-14T15:20:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findAll -->
+        <test-method status="PASS" signature="findById()[pri:0, instance:com.chainmeans.poc.swf.service.jpa.NexusServiceImplTest@3396e48c]" name="findById" duration-ms="5" started-at="2013-04-14T15:20:31Z" finished-at="2013-04-14T15:20:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findById -->
+        <test-method status="PASS" signature="findByIdWithDetail()[pri:0, instance:com.chainmeans.poc.swf.service.jpa.NexusServiceImplTest@3396e48c]" name="findByIdWithDetail" duration-ms="9" started-at="2013-04-14T15:20:31Z" finished-at="2013-04-14T15:20:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findByIdWithDetail -->
+        <test-method status="PASS" signature="save()[pri:0, instance:com.chainmeans.poc.swf.service.jpa.NexusServiceImplTest@3396e48c]" name="save" duration-ms="26" started-at="2013-04-14T15:20:31Z" finished-at="2013-04-14T15:20:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- save -->
+      </class> <!-- com.chainmeans.poc.swf.service.jpa.NexusServiceImplTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
