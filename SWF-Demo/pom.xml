@@ -222,6 +222,7 @@
     </repositories>
 
     <build>
+    	<defaultGoal>clean</defaultGoal>
         <plugins>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
