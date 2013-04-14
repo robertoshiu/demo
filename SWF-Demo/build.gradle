@@ -61,4 +61,13 @@ dependencies {
 	providedCompile group: 'javax.servlet.jsp', name: 'jsp-api', version:'2.1'
 }
 
+sourceSets {
+    main {
+        runtimeClasspath = files(output.resourcesDir) + runtimeClasspath
+    }
+    test {
+        runtimeClasspath = files(output.resourcesDir) + runtimeClasspath
+    }
+}
+
 test.useTestNG()
