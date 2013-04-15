@@ -2,13 +2,13 @@
 <flow xmlns="http://www.springframework.org/schema/webflow"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/webflow
-    http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
-    start-state="start">
+    http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd"
+	start-state="start">
 
+    <on-start>
+    	<evaluate expression="nexusController.newNexusListBean()" result="viewScope.nexusListBean"/>
+    </on-start>
     <view-state id="start" view="list.xhtml">
-        <on-entry>
-            <evaluate expression="nexusController.newNexusListBean()" result="viewScope.nexusListBean"/>
-        </on-entry>
         <transition on="view" to="show">
             <set name="requestScope.nexusId" value="nexusListBean.selectedNexus.id"/>
         </transition>
@@ -17,15 +17,18 @@
         </transition>
     </view-state>
     
+    
     <view-state id="add-step-1" view="add-step-1.xhtml">
         <transition on="next" to="add-step-2"/>
     </view-state>
+    
     
     <view-state id="add-step-2" view="add-step-2.xhtml">
         <transition on="next" to="review"/>
         <transition on="back" to="add-step-1"/>        
     </view-state>
 
+    
     <view-state id="review" view="review.xhtml">
         <transition on ="next" to="complete">
             <evaluate expression="nexusController.saveNexus(flowRequestContext)"/>
@@ -33,11 +36,14 @@
         <transition on="back" to="add-step-2"/>        
     </view-state>
     
+    
     <view-state id="complete" view="complete.xhtml">    
         <transition on="continue" to="finish"/>
     </view-state>
     
+    
     <end-state id="finish"/>    
+    
     
     <view-state id="show" view="show.xhtml">
         <on-entry>
@@ -47,8 +53,10 @@
         <transition on ="back" to="start"/>      
     </view-state>       
     
+    
     <global-transitions>
         <transition on="exit" to="start"/>
     </global-transitions>
 
+    
 </flow>
