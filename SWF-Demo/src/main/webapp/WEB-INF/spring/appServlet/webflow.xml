@@ -16,11 +16,11 @@
 
 	<!-- The registry of executable flow definitions -->
 	<flow-registry id="flowRegistry" flow-builder-services="flowBuilderServices" base-path="/WEB-INF/flows">
-		<flow-location-pattern value="/**/flow.xml" />
+		<flow-location-pattern value="/**/*-flow.xml" />
 	</flow-registry>
 
 	<!-- Configures the Spring Web Flow JSF integration -->
-	<faces:flow-builder-services id="flowBuilderServices" view-factory-creator="mvcViewFactoryCreator"/>  
+	<faces:flow-builder-services id="flowBuilderServices"/>  
 
 	<!-- A listener to create and release a FacesContext -->
 	<beans:bean id="facesContextListener" class="org.springframework.faces.webflow.FlowFacesContextLifecycleListener"/>

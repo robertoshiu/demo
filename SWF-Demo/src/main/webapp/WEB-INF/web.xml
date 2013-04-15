@@ -15,7 +15,11 @@
 	</listener>
 
     <!-- JSF 2 -->
-    <!-- Use JSF view templates saved as *.xhtml, for use with Facelets -->
+    <!-- Use JSF view templates saved as *.xhtml (default), for use with Facelets -->
+    <context-param>
+        <param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
+        <param-value>*.xhtml</param-value>
+    </context-param>
     <context-param>
         <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
         <param-value>.xhtml</param-value>
@@ -35,14 +39,14 @@
 
     <!-- Just here so the JSF implementation can initialize, *not* used at runtime -->
     <servlet>
-        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-name>facesServlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     
     <!-- Just here so the JSF implementation can initialize -->
     <servlet-mapping>
-        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-name>facesServlet</servlet-name>
         <url-pattern>*.faces</url-pattern>
     </servlet-mapping> 
 
@@ -63,10 +67,7 @@
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
-		<url-pattern>/*.app</url-pattern>
+		<url-pattern>*.htm</url-pattern>
 	</servlet-mapping>
 
-    <welcome-file-list>
-        <welcome-file>/home.app</welcome-file>
-    </welcome-file-list>
 </web-app>
