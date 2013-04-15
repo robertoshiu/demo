@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.chainmeans</groupId>
-	<artifactId>poc</artifactId>
+	<artifactId>poc-swf</artifactId>
 	<name>SWF-Demo</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
@@ -210,6 +210,12 @@
         	<artifactId>primefaces</artifactId>
         	<version>3.0.1</version>
         </dependency>
+        <dependency>
+        	<groupId>org.cloudfoundry</groupId>
+        	<artifactId>cloudfoundry-runtime</artifactId>
+        	<version>0.8.2</version>
+        	<scope>runtime</scope>
+        </dependency>
 	</dependencies>
 
     <repositories>
@@ -218,6 +224,11 @@
             <name>PrimeFaces Maven Repository</name>  
             <url>http://repository.primefaces.org</url>  
             <layout>default</layout>  
+        </repository>     
+        <repository>  
+		    <id>org.springframework.maven.milestone</id>
+		    <name>Spring Framework Maven Milestone Repository</name>
+		    <url>http://maven.springframework.org/milestone</url>
         </repository>     
     </repositories>
 

@@ -20,7 +20,7 @@
 	</flow-registry>
 
 	<!-- Configures the Spring Web Flow JSF integration -->
-	<faces:flow-builder-services id="flowBuilderServices"/>  
+	<faces:flow-builder-services id="flowBuilderServices" view-factory-creator="mvcViewFactoryCreator"/>  
 
 	<!-- A listener to create and release a FacesContext -->
 	<beans:bean id="facesContextListener" class="org.springframework.faces.webflow.FlowFacesContextLifecycleListener"/>
